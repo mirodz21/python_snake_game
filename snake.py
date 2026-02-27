@@ -34,8 +34,6 @@ class Snake:
             self.segments[seg_num].goto(new_xcor, new_ycor)
         self.head.fd(20)
 
-
-
     def move_up(self):
         if self.head.heading() != DOWN:
             self.head.setheading(UP)

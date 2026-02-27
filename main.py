@@ -12,8 +12,6 @@ screen.bgcolor("black")
 screen.title("Snake Master")
 
 screen.tracer(0)
-
-
 snake=Snake()
 food = Food()
 score = ScoreBoard()
@@ -40,15 +38,12 @@ while not game_over:
     if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
         game_over = True
         score.display_game_over()
+
     #colide with body
-    for seg in snake.segments:
-        if seg == snake.head:
-            pass
-        elif snake.head.distance(seg) < 10:
+    for seg in snake.segments[1:]:
+        if snake.head.distance(seg) < 10:
             game_over = True
             score.display_game_over()
-
-
 
 screen.exitonclick()
 
