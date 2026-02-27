@@ -11,7 +11,6 @@
 - 🍎 Randomly spawning food  
 - 📈 Score tracking system  
 - 💀 Collision detection (walls and self)  
-- 🔁 Game over and restart functionality  
 - 🧩 Clean and modular Python code structure  
 
 ---
