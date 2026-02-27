@@ -27,6 +27,12 @@ class Snake:
             new_ycor = self.segments[seg_num - 1].ycor()
             self.segments[seg_num].goto(new_xcor, new_ycor)
         self.head.fd(20)
+    def add_body(self):
+        new_snake = Turtle("square")
+        new_snake.color("white")
+        new_snake.pu()
+        new_snake.goto(0,0)
+        self.segments.append(new_snake)
 
     def move_up(self):
         if self.head.heading() != DOWN:
