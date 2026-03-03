@@ -5,7 +5,7 @@ class ScoreBoard(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
-        self.hi_score = 0
+        self.hi_score = self.get_hi_score()
         self.color("white")
         self.hideturtle()
         self.pu()
@@ -23,8 +23,14 @@ class ScoreBoard(Turtle):
     def keep_score(self):
         if self.score > self.hi_score:
             self.hi_score = self.score
+            with open("data.txt", "w") as f:
+                f.write(str(self.hi_score))
         self.score = 0
         self.update_score()
+
+    def get_hi_score(self):
+        with open("data.txt") as f:
+            return int(f.readline())
 
     # def display_game_over(self):
     #     self.goto(0,0)

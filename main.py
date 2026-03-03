@@ -22,6 +22,8 @@ screen.onkey(snake.move_down,"Down")
 screen.onkey(snake.move_left,"Left")
 screen.onkey(snake.move_right,"Right")
 
+
+
 game_over = False
 while not game_over:
     screen.update()
